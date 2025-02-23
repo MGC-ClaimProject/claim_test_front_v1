@@ -1,0 +1,80 @@
+/* ✅ 가족 페이지 전체 스타일 */
+.family-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0);
+  width: 100%;
+  max-width: 380px;
+  min-height: 100%;
+  touch-action: none; /* ✅ 스와이프만 적용 */
+}
+
+
+
+/* ✅ 타이틀 + 추가 버튼 컨테이너 */
+.family-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 380px;
+  margin-bottom: 1rem;
+}
+
+/* ✅ 가족 타이틀 */
+.family-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #005a2d;
+  text-align: center; /* ✅ 가운데 정렬 */
+  padding: 0 1rem;
+}
+
+/* ✅ 가족 추가 버튼 (배경 투명 & 검정 글씨) */
+.add-family-btn {
+  background: transparent; /* ✅ 배경을 투명하게 */
+  color: black; /* ✅ 글자색을 검정으로 */
+  padding: 0.5rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+
+}
+
+/* ✅ 버튼 호버 효과 (배경 유지 & 색상 변경) */
+.add-family-btn:hover {
+  background: rgba(0, 0, 0, 0.1); /* ✅ 살짝 어두운 배경 */
+  color: black;
+}
+
+/* ✅ 스와이프 애니메이션을 적용할 컨텐츠 */
+.family-content {
+  width: 100%;
+  transition: transform 0.3s ease-out;
+}
+
+/* ✅ 가족 리스트 컨테이너 */
+.family-list {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 1rem;
+}
+
+/* ✅ 가족 카드 스타일 */
+.family-card {
+  box-sizing: border-box;
+  width: 90%;
+  padding: 15px;
+  background: #fff;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}

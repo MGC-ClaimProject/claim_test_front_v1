@@ -1,0 +1,36 @@
+
+/* ✅ 네비게이션 바 스타일 */
+.bottom-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ 버튼 스타일 */
+.bottom-nav button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column; /* ✅ 아이콘과 텍스트 세로 정렬 */
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  color: #333;
+}
+
+/* ✅ 아이콘 스타일 */
+.nav-icon {
+  font-size: 2rem; /* ✅ 아이콘 크기 */
+  margin-bottom: 0.3rem; /* ✅ 텍스트와 간격 */
+  color: #ddd;
+}
+
+/* ✅ 버튼 호버 효과 */
+.bottom-nav button .nav-icon:hover {
+  scale: 1.2;
+  color: #fff;
+}

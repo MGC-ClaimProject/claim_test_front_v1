@@ -1,0 +1,116 @@
+/* ✅ 전체 컨테이너 스타일 */
+.insurance-container {
+  width: 100%;
+  height: 100%;
+  max-width: 380px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+/* ✅ 제목 스타일 */
+.insurance-container .title-box {
+  font-size: 1.5rem;
+  padding: 5px 5px 0 5px;
+  color: #fff;
+  text-align: left;
+}
+
+/* ✅ 신청자 & 피보험자 정보 한 줄 정렬 */
+.info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-row span {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ✅ 보험 선택 리스트 */
+.insurance-selection-box {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.insurance-selection-box h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* ✅ 리스트 스타일 */
+.insurance-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.insurance-list li {
+  background: #fff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.insurance-list li:hover {
+  background: #f1f1f1;
+}
+
+/* ✅ 선택된 보험 하이라이트 */
+.insurance-list li.selected {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+/* ✅ 버튼 스타일 */
+.select-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  background: gray;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: not-allowed;
+  transition: background 0.3s ease;
+}
+
+.select-btn.active {
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.select-btn.active:hover {
+  background: #0056b3;
+}
+
+/* ✅ 반응형 스타일 */
+@media (max-width: 500px) {
+  .insurance-container {
+    max-width: 90%;
+  }
+}

@@ -1,0 +1,46 @@
+.profile-btn {
+  width: 100%;
+  max-width: 380px;
+  padding: 12px;
+  margin: 10px auto;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  display: block;
+}
+
+/* ✅ 보험 리스트 버튼 */
+.insurance-btn {
+  background: #6200ea;
+  color: white;
+  border: none;
+}
+
+.insurance-btn:hover {
+  background: #5300d2;
+}
+
+/* ✅ 청구 내역 버튼 */
+.claims-btn {
+  background: #00897b;
+  color: white;
+  border: none;
+}
+
+.claims-btn:hover {
+  background: #00796b;
+}
+
+/* ✅ 가족 리스트 버튼 */
+.family-btn {
+  background: #f57c00;
+  color: white;
+  border: none;
+}
+
+.family-btn:hover {
+  background: #ef6c00;
+}

@@ -1,0 +1,39 @@
+.family-detail-container {
+  width: 100%;
+  max-width: 380px;
+  padding: 1rem;
+}
+.family-button-container {
+  display: flex;
+  flex-direction: column; /* ✅ 버튼을 세로로 정렬 */
+  gap: 10px;
+  margin-top: 1rem;
+  width: 100%;
+  align-items: center; /* ✅ 가운데 정렬 */
+}
+
+.claim-button, .insurance-button {
+  width: 100%; /* ✅ 버튼 너비 통일 */
+  max-width: 380px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #28a745;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-align: center;
+}
+
+.claim-button:hover {
+  background: #218838;
+}
+
+.insurance-button {
+  background: #007bff;
+}
+
+.insurance-button:hover {
+  background: #0056b3;
+}

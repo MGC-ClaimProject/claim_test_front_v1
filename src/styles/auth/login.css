@@ -1,0 +1,83 @@
+*{margin: 0; padding: 0;}
+.login-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #ffffff, #a6e22e, #ffffff);
+  padding: 5vh 0; /* 화면이 줄어들 때 내부 요소들이 자연스럽게 줄어들도록 */
+}
+
+.login-title {
+  font-size: clamp(2rem, 4vw, 5rem); /* 최소 2rem, 최대 4rem */
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: clamp(2vh, 4vh, 6vh); /* 반응형 여백 */
+  transition: font-size 0.2s ease-in-out, margin-bottom 0.2s ease-in-out;
+}
+
+
+
+.logo-wrapper {
+  margin-bottom: clamp(3vh, 4vh, 7vh); /* 최소 3vh, 최대 7vh */
+  width: clamp(30vw, 40vw, 50vw); /* 화면 크기에 맞춰 로고 크기 조절 */
+  max-width: 50vw; /* 필요에 따라 최대 크기 설정 */
+  min-width: 300px;
+}
+.logo-wrapper img {
+  width: 100%; /* 로고가 부모 크기에 맞춰 조정됨 */
+}
+
+
+.kakao-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fee500;
+  color: #000;
+  border-radius: 1vw;
+  width: 40vw; /* 기본 크기 설정 */
+  max-width: 450px; /* 최대 크기 제한 */
+  min-width: 200px; /* 최소 크기 제한 */
+  aspect-ratio: 6 / 1; /* 가로/세로 비율 유지 */
+  font-size: clamp(1rem, 2vw, 1.8rem); /* 화면 크기에 따라 폰트 크기 조정 */
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 0.5vh 0.8vh rgba(0, 0, 0, 0.1);
+  transform: scale(1); /* 기본 크기 */
+  transition: transform 0.2s ease-in-out;
+}
+
+.kakao-button:hover {
+  transform: scale(1.05); /* 호버 시 살짝 확대 */
+}
+
+.kakao-button img {
+  width: clamp(1.5vh, 2vh, 3vh); /* 아이콘 크기도 반응형 */
+  margin-right: 0.5vw;
+}
+
+.login-callback-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.2rem;
+}
+
+.loading-spinner {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}

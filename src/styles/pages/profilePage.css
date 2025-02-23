@@ -1,0 +1,98 @@
+/* ✅ 전체 컨테이너 */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 380px;
+  background: rgba(255,255,255,0);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* ✅ 제목 */
+.profile-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff4081;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* ✅ 프로필 카드 */
+.profile-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(255, 64, 129, 0.2);
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  border: 2px solid #ff4081;
+}
+
+/* ✅ 개별 정보 박스 */
+.profile-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: #ff4081;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ff80ab;
+}
+
+.profile-info label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.profile-info span {
+  flex-grow: 1;
+  text-align: right;
+  color: #000;
+}
+
+/* ✅ 수정 버튼 */
+.profile-edit-btn {
+  background: transparent;
+  border: 2px solid #ff4081;
+  color: #ff4081;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.profile-edit-btn:hover {
+  background: #ff4081;
+  color: white;
+}
+
+.profile-links{
+  width: 90%;
+  max-width: 380px;
+
+}
+.profile-links>button{
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  border: 2px solid #ff4081;
+  color: #ff4081;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}

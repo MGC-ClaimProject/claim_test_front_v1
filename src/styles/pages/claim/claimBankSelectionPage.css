@@ -1,0 +1,88 @@
+.bank-selection-container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 380px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+/* ✅ 계좌 정보 박스 */
+.account-box {
+  box-sizing: border-box;
+  width: 100%;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  position: relative; /* ✅ 오버레이 적용 가능 */
+}
+
+/* ✅ 출금 계좌 동일 체크 시 회색으로 변경 */
+.account-box.disabled {
+  background: #ddd;
+  opacity: 0.6;
+}
+
+/* ✅ 체크박스 스타일 */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin: 0 0 15px 10px;
+}
+
+.checkbox-group input {
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+}
+
+.checkbox-group label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* ✅ 버튼 스타일 */
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  background: gray;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: not-allowed;
+}
+
+/* ✅ 버튼 활성화 스타일 */
+.submit-btn.active {
+  background: #007bff;
+  cursor: pointer;
+}
+
+.submit-btn.active:hover {
+  background: #0056b3;
+}
+
+.bank-selection-container .input-group {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.bank-selection-container .input-group label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.bank-selection-container .input-group input,
+.bank-selection-container .input-group select {
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 5px;
+}

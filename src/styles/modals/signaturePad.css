@@ -1,0 +1,116 @@
+/* ✅ 서명 제목과 신청자 이름을 한 줄 정렬 */
+.signature-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+/* ✅ 신청자 및 피보험자 이름을 오른쪽 정렬 */
+.signature-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #007bff;
+  white-space: nowrap;
+}
+
+/* ✅ 서명 캔버스 컨테이너 (오버레이 추가) */
+.signature-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 380px;
+  height: 130px;
+  border-radius: 5px;
+  background: white;
+}
+
+/* ✅ 서명 캔버스 */
+.signature-canvas {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+
+}
+
+/* ✅ 서명 저장 후 패드 비활성화 */
+.signature-canvas.disabled {
+  pointer-events: none; /* 마우스 입력 비활성화 */
+  opacity: 0.6; /* 투명도 조절 */
+}
+
+/* ✅ 서명 완료 시 오버레이 */
+.signature-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* 반투명 검은색 */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  user-select: none;
+  pointer-events: none; /* 클릭 방지 */
+}
+
+/* ✅ 버튼 그룹 스타일 */
+.button-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* ✅ 버튼 비활성화 스타일 */
+.disabled {
+  background: gray !important;
+  color: #bbb !important;
+  cursor: not-allowed !important;
+}
+
+/* ✅ 활성화된 버튼 스타일 */
+.active {
+  cursor: pointer !important;
+}
+
+/* ✅ 초기화 버튼 스타일 */
+.clear-btn {
+  background: #f44336;
+  color: white;
+  flex: 1;
+  text-align: center;
+}
+
+.clear-btn:hover {
+  background: #d32f2f;
+}
+/* ✅ 저장 버튼 색상 변경 */
+.submit-btn {
+  background: #007bff; /* 기본 파란색 */
+  color: white;
+  flex: 1;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #0056b3;
+}
+
+/* ✅ 저장 완료 후 색상 변경 (초록색) */
+.submit-btn.saved {
+  background: #28a745 !important; /* 초록색 */
+}
+
+.submit-btn.saved:hover {
+  background: #218838 !important; /* 더 진한 초록색 */
+}

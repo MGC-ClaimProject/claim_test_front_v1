@@ -1,0 +1,171 @@
+/* 📌 청구 상세 페이지 컨테이너 */
+.claim-detail-container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 380px;
+  margin: 20px auto;
+  padding: 20px;
+  background: transparent;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+/* 📌 제목 & 상태 정렬 */
+.claim-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 10px;
+}
+
+/* 📌 제목 스타일 */
+.claim-header h1 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+}
+
+
+/* 📌 청구 상태 */
+.claim-status {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #d9534f;
+}
+
+/* 📌 청구 정보 전체 컨테이너 */
+.claim-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* 📌 정보 한 줄 배치 */
+.claim-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* 📌 일반 정보 스타일 */
+.claim-row p {
+  font-size: 16px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 📌 강조 텍스트 */
+.claim-row strong {
+  font-weight: bold;
+  color: #333;
+}
+
+/* 📌 보험사 목록 */
+.claim-insurers {
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;  /* 자동 줄바꿈 */
+  gap: 8px;
+}
+
+/* 📌 서명 컨테이너 */
+.claim-signatures {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+/* 📌 서명 이미지 */
+.signature-preview img {
+  max-width: 120px;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* 📌 추가 서류 컨테이너 */
+.claim-documents {
+  margin-top: 15px;
+}
+
+.claim-documents ul {
+  padding: 0;
+  list-style: none;
+
+}
+
+.claim-documents li {
+
+  font-size: 14px;
+  margin-bottom: 5px;
+
+}
+
+.claim-detail-container .next-btn {
+  background: #218838 ;
+  color: #fff;
+}
+
+.add-docs-btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.claim-detail-container .submit-btn {
+  margin-top: 1rem;
+  background-color: #218838;
+  color: white;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn:disabled {
+  background-color: #ccc;
+}
+
+
+/* 📌 반응형 스타일 */
+@media (max-width: 300px) {
+  .claim-detail-container {
+    width: 90%;
+  }
+
+  .claim-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .claim-signatures {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .claim-row p {
+    font-size: 14px;
+  }
+
+  .signature-preview img {
+    max-width: 100px;
+  }
+}

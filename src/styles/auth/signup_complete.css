@@ -1,0 +1,92 @@
+.complete-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background: #fff;
+  padding: 2rem;
+}
+
+/* ✅ 전체 박스의 일괄적인 너비 설정 */
+.complete-box {
+  width: 100%; /* ✅ 100% 설정 */
+  max-width: 380px; /* ✅ 최대 350px 유지 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ✅ 가입 완료 제목 - 검은색 */
+.complete-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 2vh;
+  text-align: center;
+}
+
+/* ✅ 축하 메시지 박스 - 검은색 + 보더 추가 */
+.message-box {
+  width: 90%; /* ✅ 100% 설정 */
+  max-width: 380px; /* ✅ 최대 350px 유지 */
+  padding: 1rem;
+  border: 2px solid #ddd; /* ✅ 보더 추가 */
+  border-radius: 20px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+/* ✅ 정보 안내 박스 - 검은색 */
+.info-box {
+  width: 90%;
+  max-width: 380px;
+  background: #e0e0e0;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+/* ✅ "내 보험 조회 바로 가기" 버튼 */
+.insurance-button {
+  width: 100%;
+  max-width: 380px; /* ✅ 최대 350px 유지 */
+  padding: 1rem;
+  background: #ffd700;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.insurance-button:hover {
+  background: #e6c200;
+}
+
+/* ✅ "시작하기" 버튼 */
+.start-button {
+  width: 100%;
+  max-width: 380px; /* ✅ 최대 350px 유지 */
+  padding: 1rem;
+  background: #ccc;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.start-button:hover {
+  background: #bbb;
+}

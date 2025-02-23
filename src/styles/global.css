@@ -1,0 +1,116 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; /* 🔹 페이지 전체 스크롤 방지 */
+}
+
+ul{
+  list-style: none;
+}
+
+#id {
+  width: 100%;
+  height: 100%;
+}
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: none;
+}
+
+/* ✅ 글로벌 레이아웃 */
+.global-layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* 🔹 전체 스크롤 방지 */
+  align-items: center;
+}
+
+/* ✅ 콘텐츠 영역 (스와이프 이동 가능) */
+.content {
+  box-sizing: border-box;
+  position: relative;
+  top: 7vh; /* ✅ 헤더 높이 고려 */
+  height: max-content;
+  min-height: calc(100vh - 14vh);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 380px;
+
+}
+
+/* ✅ 네비게이션 바 (하단 고정) */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 7vh;
+  background: #000;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* ✅ 헤더 (고정 높이 7vh) */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7vh;
+  background: #000;
+  color: white;
+  z-index: 1000;
+}
+
+/* ✅ 개별 페이지 스타일 */
+.page-container {
+  width: 90%;
+  height: 90%;
+  max-width: 1200px;
+  max-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: auto; /* 🔹 내부에서 스크롤 가능하도록 */
+}
+
+
+
+/* ✅ 네비게이션 아이콘 스타일 */
+.nav-icon {
+  font-size: 2rem;
+  color: #ddd;
+}
+
+/* ✅ 네비게이션 버튼 스타일 */
+.bottom-nav button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  color: white;
+}
+
+/* ✅ 버튼 호버 효과 */
+.bottom-nav button:hover .nav-icon {
+  scale: 1.2;
+  color: #fff;
+}

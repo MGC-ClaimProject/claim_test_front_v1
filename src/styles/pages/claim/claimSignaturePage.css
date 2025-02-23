@@ -1,0 +1,17 @@
+.signature-container {
+  box-sizing: border-box;
+
+}
+
+.signature-container .title-box {
+  margin-bottom: 2px;
+}
+
+.info-section {
+  box-sizing: border-box;
+  padding-bottom: 10px;
+}
+
+.signature-container .next-btn {
+  margin-top: 5px;
+}

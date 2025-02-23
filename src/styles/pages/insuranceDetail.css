@@ -1,0 +1,61 @@
+/* 📌 보험 상세 페이지 컨테이너 */
+.insurance-detail-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: #ffffff;
+  width: 90%;
+  max-width: 380px;
+  margin: auto;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* 📌 제목 스타일 */
+.insurance-detail-container h1 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* 📌 보험 정보 스타일 */
+.insurance-info {
+  width: 100%;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* 📌 보험 정보 텍스트 스타일 */
+.insurance-info p {
+  font-size: 1rem;
+  color: #444;
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 📌 강조된 텍스트 */
+.insurance-info strong {
+  font-weight: bold;
+  color: #222;
+}
+
+/* 📌 반응형 스타일 */
+@media (max-width: 480px) {
+  .insurance-detail-container {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .insurance-info {
+    padding: 0.8rem;
+  }
+
+  .insurance-info p {
+    font-size: 0.9rem;
+  }
+}

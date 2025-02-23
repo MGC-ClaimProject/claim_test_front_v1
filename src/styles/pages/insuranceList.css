@@ -1,0 +1,143 @@
+/* ✅ 전체 컨테이너 스타일 */
+.insurance-container {
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: transparent; /* ✅ 배경 투명 */
+}
+
+/* ✅ 페이지 제목 스타일 */
+.page-title{
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ✅ 박스 공통 스타일 */
+.contract-status-box,
+.monthly-premium-box,
+.contract-list-box {
+  background: #ddd; /* ✅ 박스 배경 회색 */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* ✅ 제목 스타일 */
+.insurance-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: black; /* ✅ 글씨 검정 */
+}
+
+/* ✅ 텍스트 스타일 */
+.insurance-container p {
+  font-size: 1.2rem;
+  color: black; /* ✅ 글씨 검정 */
+}
+
+/* ✅ 리스트 스타일 */
+.insurance-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.insurance-container ul li {
+  background: #ddd; /* ✅ 박스 배경 회색 */
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  font-weight: bold;
+  color: black; /* ✅ 글씨 검정 */
+}
+
+/* ✅ 제목 + 추가 버튼 컨테이너 */
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* ✅ 추가 버튼 스타일 */
+.add-insurance-btn {
+  background: transparent;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease-in-out;
+}
+
+
+/* ✅ 버튼 클릭 효과 */
+.add-insurance-btn:active {
+  transform: scale(0.95);
+}
+
+
+
+/* ✅ 반응형 - 모바일 최적화 */
+@media (max-width: 600px) {
+  .insurance-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .contract-status-box,
+  .monthly-premium-box,
+  .contract-list-box {
+    padding: 12px;
+  }
+
+  .insurance-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .insurance-container p {
+    font-size: 1rem;
+  }
+
+  .insurance-container ul li {
+    font-size: 0.9rem;
+  }
+}
+
+
+.insurance-list-container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.insurance-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ✅ 보험 리스트 항목 스타일 */
+.insurance-item {
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px 0;
+  background: #f9f9f9;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.insurance-item:hover {
+  background: #e0e0e0;
+}
+
