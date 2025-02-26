@@ -12,23 +12,20 @@
   border: 2px solid #ff5252; /* ✅ 초록색 테마 */
 }
 
-/* ✅ 제목 & 취소 버튼 정렬 */
 .profile-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
-/* ✅ 취소 (X) 버튼 - 투명한 배경 적용 */
 .cancel-btn {
-  background: transparent; /* ✅ 배경 투명 처리 */
+  background: transparent;
   border: none;
   font-size: 1.5rem;
   color: #ff5252;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
-  margin-left: auto; /* ✅ 제목 오른쪽 끝으로 정렬 */
+  margin-left: auto;
 }
 
 .cancel-btn:hover {

@@ -3,11 +3,7 @@ import { FaHome, FaClipboardList, FaFileAlt, FaUser } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import "../styles/navbar.css";
 
-interface NavBarProps {
-  onUserClick?: () => void; // ✅ 사용자 클릭 이벤트 prop 추가
-}
-
-const NavBar: React.FC<NavBarProps> = ({ onUserClick }) => {
+const NavBar: React.FC = () => {
   const navigate = useNavigate();
 
   return (
@@ -21,7 +17,7 @@ const NavBar: React.FC<NavBarProps> = ({ onUserClick }) => {
       <button onClick={() => navigate("/main/claims")}>
         <FaFileAlt className="nav-icon" />
       </button>
-      <button onClick={onUserClick ? onUserClick : () => navigate("/main/profile")}>
+      <button onClick={() => navigate("/main/profile")}>
         <FaUser className="nav-icon" />
       </button>
     </header>

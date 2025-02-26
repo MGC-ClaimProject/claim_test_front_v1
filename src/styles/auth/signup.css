@@ -22,7 +22,8 @@
 /* ✅ 프로필 & 동의 박스 크기 조정 */
 .signup-container .profile-card,
 .signup-container .agreement-box {
-  width: 100%; /* 기본적으로 화면 크기에 맞춤 */
+  box-sizing: border-box;
+  width: 90%; /* 기본적으로 화면 크기에 맞춤 */
   max-width: 380px; /* 최대 350px로 고정 */
   background: white;
   border-radius: 12px;

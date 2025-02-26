@@ -3,11 +3,11 @@ import { useState, useEffect, RefObject } from "react";
 
 export const useSwipe = (
   contentRef: RefObject<HTMLDivElement>,
-  onToggleMyPage: (isOpen: boolean) => void
+  // onToggleMyPage: (isOpen: boolean) => void
 ) => {
   const [offset, setOffset] = useState(0);
   const [maxOffset, setMaxOffset] = useState(0);
-  const SWIPE_THRESHOLD = 40; // ✅ 스와이프 감지 최소 거리 (모바일 최적화)
+  // const SWIPE_THRESHOLD = 40; // ✅ 스와이프 감지 최소 거리 (모바일 최적화)
   const DAMPING_FACTOR = 0.35; // ✅ 손가락 이동 감속 비율 (적절한 반응성 유지)
 
   // ✅ maxOffset 동적 업데이트 (콘텐츠 크기 변화 감지)
@@ -38,16 +38,19 @@ export const useSwipe = (
     }
   }, [contentRef]);
 
-  // ✅ 스와이프 감지 (위아래 + 좌우)
+  // ✅ 스와이프 감지 (위아래만 작동)
   const bind = useDrag(
     ({ movement: [mx, my], last, axis }) => {
       if (!contentRef.current) return;
 
+      // 좌우 스와이프 잠시 주석 처리
+      /*
       // ✅ 좌우 스와이프 감지 (마이페이지 토글)
       if (axis === "x" && Math.abs(mx) > Math.abs(my)) {
         if (mx < -SWIPE_THRESHOLD) onToggleMyPage(true);
         if (mx > SWIPE_THRESHOLD) onToggleMyPage(false);
       }
+      */
 
       // ✅ 위아래 스와이프 감지 (스크롤 이동)
       if (axis === "y" && Math.abs(my) > Math.abs(mx)) {

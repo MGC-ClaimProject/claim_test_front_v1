@@ -12,11 +12,13 @@ const ProfileCard: React.FC<{
   hideRelation?: boolean;
 }> = ({ setFormData, onSave, hideRelation = false }) => {
   const location = useLocation();
-  const memberId = location.state?.memberId || JSON.parse(localStorage.getItem("user") || "null")?.member_id;
+  const memberId =
+    location.state?.memberId ||
+    JSON.parse(localStorage.getItem("user") || "null")?.member_id;
 
   const [tempData, setTempData] = useState<Member | null>(null);
   const [loading, setLoading] = useState(true);
-  const [isEditing, setIsEditing] = useState(false); // ✅ 수정 모드 상태 추가
+  const [isEditing, setIsEditing] = useState(false); // 수정 모드 상태
 
   useEffect(() => {
     if (!memberId) {
@@ -41,7 +43,7 @@ const ProfileCard: React.FC<{
   if (loading) return <p>🔄 멤버 정보를 불러오는 중...</p>;
   if (!tempData) return <p>❌ 멤버 정보를 불러올 수 없습니다.</p>;
 
-  // ✅ 전화번호 포맷 적용
+  // 전화번호 포맷 적용 함수
   function formatPhoneNumber(value: string) {
     const cleaned = value.replace(/\D/g, "");
     if (cleaned.length <= 3) return cleaned;
@@ -49,8 +51,10 @@ const ProfileCard: React.FC<{
     return `${cleaned.slice(0, 3)}-${cleaned.slice(3, 7)}-${cleaned.slice(7, 11)}`;
   }
 
-  // ✅ 입력 변경 감지
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  // 입력 변경 감지
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setTempData((prev) => ({
       ...prev!,
@@ -58,11 +62,14 @@ const ProfileCard: React.FC<{
     }));
   };
 
-  // ✅ 수정된 데이터 저장
+  // 수정된 데이터 저장
   const handleSave = async () => {
     if (!tempData) return;
     try {
-      const requestData = { ...tempData, phone: tempData.phone.replace(/-/g, "") };
+      const requestData = {
+        ...tempData,
+        phone: tempData.phone.replace(/-/g, ""),
+      };
       const response = await auth.patch(`/members/${tempData.id}/`, requestData);
       const updatedMember = response.data;
 
@@ -70,14 +77,14 @@ const ProfileCard: React.FC<{
       setTempData(updatedMember);
       alert("✅ 정보가 성공적으로 저장되었습니다.");
       onSave?.();
-      setIsEditing(false); // ✅ 저장 후 수정 모드 종료
+      setIsEditing(false);
     } catch (error) {
       console.error("❌ 정보 수정 실패:", error);
       alert("정보 수정에 실패했습니다.");
     }
   };
 
-  // ✅ 수정 취소
+  // 수정 취소
   const handleCancel = () => {
     setIsEditing(false);
   };
@@ -86,13 +93,22 @@ const ProfileCard: React.FC<{
     <div className="profile-card">
       <div className="profile-header">
         <h2 className="profile-title">{tempData.name || "고객"}님의 정보</h2>
+        {isEditing && (
+          <button className="cancel-btn" onClick={handleCancel}>
+            ❌
+          </button>
+        )}
       </div>
 
-      {/* ✅ isEditing 상태에 따라 입력 필드 활성화 */}
       <div className="profile-info">
         <label>📝 이름</label>
         {isEditing ? (
-          <input type="text" name="name" value={tempData.name} onChange={handleInputChange} />
+          <input
+            type="text"
+            name="name"
+            value={tempData.name}
+            onChange={handleInputChange}
+          />
         ) : (
           <span>{tempData.name}</span>
         )}
@@ -101,7 +117,12 @@ const ProfileCard: React.FC<{
       <div className="profile-info">
         <label>📞 연락처</label>
         {isEditing ? (
-          <input type="text" name="phone" value={tempData.phone} onChange={handleInputChange} />
+          <input
+            type="text"
+            name="phone"
+            value={tempData.phone}
+            onChange={handleInputChange}
+          />
         ) : (
           <span>{formatPhoneNumber(tempData.phone)}</span>
         )}
@@ -110,7 +131,12 @@ const ProfileCard: React.FC<{
       <div className="profile-info">
         <label>🎂 생년월일</label>
         {isEditing ? (
-          <input type="date" name="birth" value={tempData.birth} onChange={handleInputChange} />
+          <input
+            type="date"
+            name="birth"
+            value={tempData.birth}
+            onChange={handleInputChange}
+          />
         ) : (
           <span>{tempData.birth}</span>
         )}
@@ -119,7 +145,11 @@ const ProfileCard: React.FC<{
       <div className="profile-info">
         <label>🚻 성별</label>
         {isEditing ? (
-          <select name="gender" value={tempData.gender} onChange={handleInputChange}>
+          <select
+            name="gender"
+            value={tempData.gender}
+            onChange={handleInputChange}
+          >
             {Object.entries(GENDER_CHOICES).map(([value, label]) => (
               <option key={value} value={value}>
                 {label}
@@ -135,7 +165,11 @@ const ProfileCard: React.FC<{
         <div className="profile-info">
           <label>🔗 관계</label>
           {isEditing ? (
-            <select name="relation" value={tempData.relation || "기타"} onChange={handleInputChange}>
+            <select
+              name="relation"
+              value={tempData.relation || "기타"}
+              onChange={handleInputChange}
+            >
               {Object.entries(RELATION_CHOICES).map(([value, label]) => (
                 <option key={value} value={value}>
                   {label}
@@ -148,14 +182,19 @@ const ProfileCard: React.FC<{
         </div>
       )}
 
-      {/* ✅ 수정 모드일 때만 저장 & 취소 버튼 표시 */}
       {isEditing ? (
         <div className="button-group">
-          <button className="profile-save-btn" onClick={handleSave}>✅ 저장하기</button>
-          <button className="profile-cancel-btn" onClick={handleCancel}>❌ 취소</button>
+          <button className="profile-save-btn" onClick={handleSave}>
+            ✅ 저장하기
+          </button>
         </div>
       ) : (
-        <button className="profile-edit-btn" onClick={() => setIsEditing(true)}>✏️ 수정하기</button>
+        <button
+          className="profile-edit-btn"
+          onClick={() => setIsEditing(true)}
+        >
+          ✏️ 수정하기
+        </button>
       )}
     </div>
   );
